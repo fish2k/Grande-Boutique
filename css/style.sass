@@ -1,10 +1,9 @@
 @import url('bootstrap-grid.min.css')
 @import url('../js/owl/owl.carousel.min.css')
-@import url('../fonts/HhelveticaNeue/helveticaneue.css')
 
 $red: #A30102
 $orange: #FF8B00
-$helvetica: 'HelveticaNeueCyr', sans-serif
+$montserrat: 'Montserrat', sans-serif
 
 a
   &:link
@@ -18,8 +17,8 @@ html
   height: 100%
   max-height: 100%
   min-height: 100%
-  font-family: $helvetica
-  font-size: 14px
+  font-family: $montserrat
+  font-size: 13px
   line-height: 1.5
 
 .header-top
@@ -428,6 +427,10 @@ html
       &:hover
         color: $red
 
+.footer-socials
+  display: table
+  float: right
+
 .social
   width: 31px
   height: 31px
@@ -441,14 +444,17 @@ html
   background-image: url('../img/vk.jpg')
   background-size: contain
   background-repeat: no-repeat
+
 .social-fb
   background-image: url('../img/fb.jpg')
   background-size: contain
   background-repeat: no-repeat
+
 .social-ig
   background-image: url('../img/ig.jpg')
   background-size: contain
   background-repeat: no-repeat
+
 .social-yt
   background-image: url('../img/yt.jpg')
   background-size: contain
@@ -457,3 +463,4 @@ html
   background-image: url('../img/ok.jpg')
   background-size: contain
   background-repeat: no-repeat
+
