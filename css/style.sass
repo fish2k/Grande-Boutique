@@ -24,6 +24,8 @@ html
 .header-top
   background-color: #222222
   color: #fff
+  & .container
+    position: relative
   & a
     color: #fff
     text-decoration: none
@@ -384,6 +386,8 @@ html
   padding-top: 30px
   padding-bottom: 30px
   background-color: #f7f7f7
+  & iframe
+    width: 100%
 
 .welcome
   background-color: #f7f7f7
@@ -463,3 +467,64 @@ html
   background-size: contain
   background-repeat: no-repeat
 
+.contacts
+  & p
+    & > span
+      display: block
+      color: #777
+
+.contact-form
+  & b
+    display: block
+    margin-top: 15px
+    font-size: 1.2em
+  & label
+    width: 50%
+    float: left
+    &[for="agree"]
+      display: block
+      float: left
+      width: 100%
+      clear: both
+    & span
+      display: inline-block
+      margin-top: 10px
+      margin-bottom: 10px
+    & input,
+      display: block
+      width: 100%
+      line-height: 2.5em
+    & textarea
+      display: block
+      width: calc(100% - 15px)
+      line-height: 2.3em
+    & input,
+    & textarea
+      border: 1px solid #d9d9d9
+      background: #f0f0f0
+      border-radius: 4px
+
+.header-burger
+  display: none
+  position: absolute
+  top: 7px
+  right: 15px
+  width: 30px
+  height: 30px
+  cursor: pointer
+  //background-color: rgba(255,255,255, .15)
+  & span
+    position: absolute
+    left: 0
+    right: 0
+    height: 4px
+    background-color: $orange
+    border-radius: 3px
+    &:nth-of-type(1)
+      top: 3px
+    &:nth-of-type(2)
+      top: 13px
+    &:nth-of-type(3)
+      top: 23px
+
+@import 'media'

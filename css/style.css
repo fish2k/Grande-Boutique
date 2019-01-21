@@ -21,6 +21,10 @@ html {
   color: #fff;
 }
 
+.header-top .container {
+  position: relative;
+}
+
 .header-top a {
   color: #fff;
   text-decoration: none;
@@ -496,6 +500,10 @@ html {
   background-color: #f7f7f7;
 }
 
+.videos iframe {
+  width: 100%;
+}
+
 .welcome {
   background-color: #f7f7f7;
   border-top: .3px solid transparent;
@@ -598,5 +606,232 @@ html {
   background-image: url("../img/ok.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.contacts p > span {
+  display: block;
+  color: #777;
+}
+
+.contact-form b {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.2em;
+}
+
+.contact-form label {
+  width: 50%;
+  float: left;
+}
+
+.contact-form label[for="agree"] {
+  display: block;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+.contact-form label span {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form label input {
+  display: block;
+  width: 100%;
+  line-height: 2.5em;
+}
+
+.contact-form label textarea {
+  display: block;
+  width: calc(100% - 15px);
+  line-height: 2.3em;
+}
+
+.contact-form label input,
+.contact-form label textarea {
+  border: 1px solid #d9d9d9;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.header-burger {
+  display: none;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.header-burger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #FF8B00;
+  border-radius: 3px;
+}
+
+.header-burger span:nth-of-type(1) {
+  top: 3px;
+}
+
+.header-burger span:nth-of-type(2) {
+  top: 13px;
+}
+
+.header-burger span:nth-of-type(3) {
+  top: 23px;
+}
+
+@media (max-width: 1199px) {
+  body {
+    margin-top: 44px;
+  }
+  .header-cart span {
+    display: none;
+  }
+  .header-cart i {
+    padding-right: 3px;
+  }
+  .header-links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-address {
+    display: none;
+  }
+  .header-toggle a.active:before {
+    display: none;
+  }
+  .header-city:after {
+    right: 8px;
+    bottom: 31px;
+  }
+  .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .header-top .container {
+    width: 100% !important;
+  }
+  .header-nav {
+    position: fixed;
+    top: 44px;
+    bottom: 0;
+    left: -250px;
+    width: 250px;
+    z-index: 5;
+    background-color: #222222;
+    margin-top: 0;
+    -webkit-transition: ease all 250ms;
+    transition: ease all 250ms;
+  }
+  .header-nav li {
+    display: block;
+  }
+  .header-nav li.active a {
+    background-color: #FF8B00;
+    color: #fff;
+  }
+  .header-nav li:before {
+    display: none;
+  }
+  .header-nav li a {
+    color: #fff;
+  }
+  .show-nav {
+    left: 0;
+  }
+  .header-burger {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .left-links {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainslider-item .item-body {
+    right: 50%;
+  }
+  .item-text {
+    font-size: 1.5em;
+  }
+  .item-btn {
+    margin-top: 15px;
+  }
+  .header-links {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .header-contact > a {
+    display: inline;
+    margin-right: 30px;
+  }
+  .header-contact > a:nth-of-type(2) {
+    margin-right: 0;
+  }
+  .header-contact span {
+    display: block;
+    margin-top: 10px;
+  }
+  .header-callme {
+    line-height: 3.3em;
+    display: table;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: right;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #A30102;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-show {
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  body {
+    margin-top: 59px;
+  }
+  .header-city:after {
+    right: -4px;
+    bottom: 11px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-contact {
+    text-align: center;
+  }
+  .header-contact > a {
+    display: block;
+    margin-right: 0;
+  }
+  .header-callme {
+    float: none;
+    margin: 15px auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
