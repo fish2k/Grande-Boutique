@@ -238,7 +238,7 @@ html {
   content: '';
   bottom: 0;
   left: 0;
-  right: 30px;
+  right: 0;
   height: 2px;
   background-color: #A30102;
 }
@@ -247,7 +247,6 @@ html {
   display: block;
   padding-left: 30px;
   padding-right: 30px;
-  margin-right: 30px;
   line-height: 3.5em;
   text-transform: uppercase;
   font-weight: bold;
