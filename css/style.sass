@@ -1,8 +1,15 @@
 @import url('bootstrap-grid.min.css')
 @import url('../js/owl/owl.carousel.min.css')
+@import url('../fonts/HhelveticaNeue/helveticaneue.css')
 
 $red: #A30102
 $orange: #FF8B00
+$helvetica: 'HelveticaNeueCyr', sans-serif
+
+a
+  &:link
+    &:hover
+      color: $red
 
 body,
 html
@@ -11,7 +18,7 @@ html
   height: 100%
   max-height: 100%
   min-height: 100%
-  font-family: 'Arial', sans-serif
+  font-family: $helvetica
   font-size: 14px
   line-height: 1.5
 
@@ -40,9 +47,28 @@ html
   padding-left: 10px
   padding-right: 10px
 
+.header-callme
+  color: $red
+
+.header-city
+  cursor: pointer
+  position: relative
+  padding-right: 15px
+  & span
+    font-weight: bold
+    border-bottom: 1px dotted #222
+  &:after
+    position: absolute
+    content: ''
+    right: 0
+    bottom: 13px
+    width: 11px
+    height: 7px
+    background-image: url('../img/ard.jpg')
+
 .header-cart
   background-color: $orange
-  padding: 15px
+  padding: 13px
   cursor: pointer
   & i
     padding-right: 15px
@@ -360,3 +386,74 @@ html
   padding-top: 30px
   padding-bottom: 30px
   background-color: #f7f7f7
+
+.welcome
+  background-color: #f7f7f7
+  border-top: .3px solid transparent
+  font-size: 1.2em
+  padding-bottom: 50px
+  & img
+    margin-top: 15px
+    margin-right: 15px
+
+.footer
+  padding-top: 30px
+  background-color: #f7f7f7
+  margin-top: 5px
+  padding-bottom: 30px
+  & .main-logo
+    margin-top: 0
+    line-height: 1
+    margin-bottom: 10px
+  & a
+    color: #222
+    text-decoration: none
+    &:hover
+      color: $red
+  & small
+    margin-top: 15px
+    font-size: .8em
+    text-align: center
+    display: block
+    color: #999
+  
+.footer-links
+  margin: 0 20px 0
+  padding: 0
+  list-style-type: none
+  float: left
+  & > li
+    & > a
+      line-height: 2em
+      &:hover
+        color: $red
+
+.social
+  width: 31px
+  height: 31px
+  display: block
+  float: left
+  margin-right: 15px
+  &:last-child
+    margin-right: 0
+
+.social-vk
+  background-image: url('../img/vk.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+.social-fb
+  background-image: url('../img/fb.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+.social-ig
+  background-image: url('../img/ig.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+.social-yt
+  background-image: url('../img/yt.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+.social-ok
+  background-image: url('../img/ok.jpg')
+  background-size: contain
+  background-repeat: no-repeat
