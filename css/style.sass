@@ -6,9 +6,7 @@ $orange: #FF8B00
 $montserrat: 'Montserrat', sans-serif
 
 a
-  &:link
-    &:hover
-      color: $red
+  color: $red
 
 body,
 html
@@ -130,6 +128,8 @@ html
 .header-contact
   padding-top: 15px
   text-align: right
+  & span
+    font-style: italic
   & > a
     display: block
     font-size: 1.5em
@@ -474,6 +474,10 @@ html
       color: #777
 
 .contact-form
+  &:after
+    content: ''
+    clear: both
+    display: block
   & b
     display: block
     margin-top: 15px
@@ -486,23 +490,52 @@ html
       float: left
       width: 100%
       clear: both
+      margin-top: 15px
+      margin-bottom: 15px
+      cursor: pointer
     & span
       display: inline-block
       margin-top: 10px
       margin-bottom: 10px
-    & input,
+    & i
+      color: $red
+    & input:not([type=checkbox]),
       display: block
       width: 100%
       line-height: 2.5em
+      outline: none
     & textarea
       display: block
       width: calc(100% - 15px)
-      line-height: 2.3em
+      line-height: 2.35em
+      outline: none
     & input,
     & textarea
       border: 1px solid #d9d9d9
       background: #f0f0f0
       border-radius: 4px
+      padding-left: 15px
+      padding-right: 15px
+  button
+    &[type="submit"],
+    &[type="reset"]
+      border: 2px solid $red
+      line-height: 2.5em
+      padding-left: 15px
+      padding-right: 15px
+      text-transform: uppercase
+      margin-right: 15px
+      border-radius: 5px
+      font-family: inherit
+      font-weight: 600
+      display: block
+      float: left
+    &[type="submit"]
+      background-color: $red
+      color: #fff
+    &[type="reset"]
+      background-color: transparent
+      color: $red
 
 .header-burger
   display: none

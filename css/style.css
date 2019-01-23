@@ -1,6 +1,6 @@
 @import url("bootstrap-grid.min.css");
 @import url("../js/owl/owl.carousel.min.css");
-a:link:hover {
+a {
   color: #A30102;
 }
 
@@ -162,6 +162,10 @@ html {
 .header-contact {
   padding-top: 15px;
   text-align: right;
+}
+
+.header-contact span {
+  font-style: italic;
 }
 
 .header-contact > a {
@@ -613,6 +617,12 @@ html {
   color: #777;
 }
 
+.contact-form:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
 .contact-form b {
   display: block;
   margin-top: 15px;
@@ -629,6 +639,9 @@ html {
   float: left;
   width: 100%;
   clear: both;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .contact-form label span {
@@ -637,16 +650,22 @@ html {
   margin-bottom: 10px;
 }
 
-.contact-form label input {
+.contact-form label i {
+  color: #A30102;
+}
+
+.contact-form label input:not([type=checkbox]) {
   display: block;
   width: 100%;
   line-height: 2.5em;
+  outline: none;
 }
 
 .contact-form label textarea {
   display: block;
   width: calc(100% - 15px);
-  line-height: 2.3em;
+  line-height: 2.35em;
+  outline: none;
 }
 
 .contact-form label input,
@@ -654,6 +673,32 @@ html {
   border: 1px solid #d9d9d9;
   background: #f0f0f0;
   border-radius: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.contact-form button[type="submit"], .contact-form button[type="reset"] {
+  border: 2px solid #A30102;
+  line-height: 2.5em;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  display: block;
+  float: left;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #A30102;
+  color: #fff;
+}
+
+.contact-form button[type="reset"] {
+  background-color: transparent;
+  color: #A30102;
 }
 
 .header-burger {
@@ -688,7 +733,7 @@ html {
 }
 
 @media (max-width: 1199px) {
-  body {
+  .header {
     margin-top: 44px;
   }
   .header-cart span {
@@ -726,7 +771,7 @@ html {
     position: fixed;
     top: 44px;
     bottom: 0;
-    left: -250px;
+    left: -251px;
     width: 250px;
     z-index: 5;
     background-color: #222222;
@@ -762,6 +807,19 @@ html {
 }
 
 @media (max-width: 768px) {
+  .footer-socials {
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .social {
+    display: inline-block;
+    float: none;
+  }
+  .footer-links {
+    margin: 15px 30px 0 0;
+  }
   .mainslider-item .item-body {
     right: 50%;
   }
@@ -802,9 +860,32 @@ html {
     border-radius: 3px;
     cursor: pointer;
   }
+  .mainslider-item .item-body {
+    right: 0;
+  }
 }
 
 @media (max-width: 576px) {
+  .mainslider .owl-nav .owl-next {
+    right: 0;
+  }
+  .mainslider .owl-nav .owl-prev {
+    left: 0;
+  }
+  .product .owl-nav .owl-next {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-color: #fff !important;
+    right: 5px;
+  }
+  .product .owl-nav .owl-prev {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-color: #fff !important;
+    left: 5px;
+  }
   .news-show {
     margin-bottom: 30px;
   }
@@ -812,7 +893,7 @@ html {
     font-size: 1.4em;
     font-weight: 600;
   }
-  body {
+  .header {
     margin-top: 59px;
   }
   .header-city:after {
@@ -822,6 +903,13 @@ html {
 }
 
 @media (max-width: 425px) {
+  .contact-form label {
+    width: 100%;
+    clear: both;
+  }
+  .contact-form label textarea {
+    width: 100%;
+  }
   .header-contact {
     text-align: center;
   }
@@ -832,6 +920,19 @@ html {
   .header-callme {
     float: none;
     margin: 15px auto;
+  }
+  .welcome {
+    font-size: 1em;
+  }
+  .welcome .container .row .col-md-12 img {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-img {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

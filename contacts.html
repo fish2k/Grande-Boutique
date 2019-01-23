@@ -20,16 +20,16 @@
     <div class="header-top">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-3 left-links">
+          <div class="col-lg-3 left-links">
             <a href="/">О копании</a>
             <a href="/">Магазины</a>
           </div>
-          <div class="col-md-6 header-address">
+          <div class="col-lg-6 header-address">
             <span><i class="fa fa-map-marker-alt"></i>г. Уфа, ул. Чернышевского, 75</span>
             <span><a href="tel:+73472465611">+7 (347) 246-56-11</a></span>
             <span><a href="tel:+73472465611">+7 (347) 246-56-11</a></span>
           </div>
-          <div class="col-md-3 header-links">
+          <div class="col-lg-3 col-md-4 header-links">
             <div class="header-link header-user">
               <i class="fa fa-user"></i>
             </div>
@@ -42,12 +42,17 @@
             </a>
           </div>
         </div>
+        <div class="header-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
     <div class="header-middle">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-5 header-inline">
+          <div class="col-lg-5 col-md-6 header-inline">
             <div class="header-toggle">
               <a class="active" href="/">Женщины</a>
               <a href="/">Мужчины</a>
@@ -56,7 +61,7 @@
               Ваш город: <span>Уфа</span>
             </div>
           </div>
-          <div class="col-md-3 header-middle">
+          <div class="col-lg-3 col-md-6 header-middle">
             <div class="main-logo">
               grande<span>boutique</span>
             </div>
@@ -67,11 +72,11 @@
               </button>
             </form>
           </div>
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-12">
             <div class="header-contact">
               <a href="tel:+73472465511">+7 (347) 246-55-11</a>
               <a href="tel:88007754112">8 (800) 775-41-12</a>
-              Бесплатный звонок по России
+              <span>Бесплатный звонок по России</span>
               <div class="header-callme">
                 Перезвоните мне
               </div>
@@ -96,7 +101,7 @@
 
   <div class="container-fluid">
     <h2 class="title">Контакты</h2>
-    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adb8278b895d4eaa9c91d7573b1f895865c1eb79f8af7d1e8214bb359aee08afe&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script> -->
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adb8278b895d4eaa9c91d7573b1f895865c1eb79f8af7d1e8214bb359aee08afe&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
   </div>
 
   <div class="container contacts">
@@ -131,12 +136,13 @@
           <label for="telephone"><span>Контактный телефон:</span> <i>*</i>
             <input type="text" name="telephone" id="telephone">
           </label>
-          <label for="email"><span>E-mail:</span> <i>*</i>
+          <label for="email"><span>E-mail:</span>
             <input type="email" name="email" id="email">
           </label>
           <label for="agree">
-            <input type="checkbox"> dsds
+            <input id="agree" type="checkbox"> Я даю согласие на <a href="/">обработку персональных данных</a>
           </label>
+          <button type="submit">Отправить</button><button type="reset">Очистить</button>
         </form>
       </div>
     </div>
@@ -145,7 +151,7 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <div class="main-logo">
             grande<span>boutique</span>
           </div>
@@ -153,7 +159,7 @@
           <a href="">+7 (347) 246-56-11</a><br>
           <a href="">+7 (347) 246-56-11</a>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-4">
           <ul class="footer-links">
             <li><a href="">Grande Boutique</a></li>
             <li><a href="">О компании</a></li>
@@ -169,7 +175,7 @@
             <li><a href="">Размерная сетка</a></li>
           </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <div class="footer-socials">
             <a class="social social-fb" href="/" target="_blank"></a>
             <a class="social social-vk" href="/" target="_blank"></a>

@@ -1,5 +1,5 @@
 @media (max-width: 1199px)
-  body
+  .header
     margin-top: 44px
 
   .header-cart
@@ -38,7 +38,7 @@
     position: fixed
     top: 44px
     bottom: 0
-    left: -250px
+    left: -251px
     width: 250px
     z-index: 5
     background-color: #222222
@@ -66,6 +66,19 @@
     display: none
 
 @media (max-width: 768px)
+  .footer-socials
+    margin-top: 15px
+    text-align: center
+    display: block
+    width: 100%
+
+  .social
+    display: inline-block
+    float: none
+
+  .footer-links
+    margin: 15px 30px 0 0
+
   .mainslider-item
     & .item-body
       right: 50%
@@ -104,7 +117,33 @@
     border-radius: 3px
     cursor: pointer
 
+  .mainslider-item
+    & .item-body
+      right: 0
+
 @media (max-width: 576px)
+  .mainslider
+    & .owl-nav
+      & .owl-next
+        right: 0
+      & .owl-prev
+        left: 0
+
+  .product
+    & .owl-nav
+      & .owl-next
+        width: 35px
+        height: 35px
+        text-align: center
+        background-color: #fff !important
+        right: 5px
+      & .owl-prev
+        width: 35px
+        height: 35px
+        text-align: center
+        background-color: #fff !important
+        left: 5px
+  
   .news-show
     margin-bottom: 30px
 
@@ -112,7 +151,7 @@
     font-size: 1.4em
     font-weight: 600
 
-  body
+  .header
     margin-top: 59px
 
   .header-city
@@ -121,6 +160,12 @@
       bottom: 11px
 
 @media (max-width: 425px)
+  .contact-form
+    & label
+      width: 100%
+      clear: both
+      & textarea
+        width: 100%
   .header-contact
     text-align: center
     & > a
@@ -130,3 +175,16 @@
   .header-callme
     float: none
     margin: 15px auto
+
+  .welcome
+    font-size: 1em
+    & .container
+      & .row
+        & .col-md-12
+          & img
+            float: none
+            width: 100%
+  
+@media (max-width: 400px)
+  .brand-img
+    max-width: 100%
