@@ -204,7 +204,7 @@ html {
   font-family: inherit;
   float: left;
   width: 20%;
-  padding-top: 11px;
+  padding-top: 12px;
   padding-bottom: 11px;
   border: 1px solid #d0d0d0;
   border-top-right-radius: 5px;
@@ -236,12 +236,20 @@ html {
   background-color: #c7c7c7;
 }
 
-.header-nav li {
+.header-nav > li {
   display: inline-block;
   position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 3.5em;
+  cursor: pointer;
 }
 
-.header-nav li.active:before, .header-nav li:hover:before {
+.header-nav > li.header-sub:hover .header-subnav {
+  display: block;
+}
+
+.header-nav > li.active:before, .header-nav > li:hover:before {
   position: absolute;
   content: '';
   bottom: 0;
@@ -251,17 +259,46 @@ html {
   background-color: #A30102;
 }
 
-.header-nav li a {
+.header-nav > li > a {
   display: block;
   padding-left: 30px;
   padding-right: 30px;
   line-height: 3.5em;
   text-transform: uppercase;
-  font-weight: bold;
   text-decoration: none;
   color: #222;
   -webkit-transition: ease all 250ms;
   transition: ease all 250ms;
+}
+
+.header-subnav {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: calc(100% + 50px);
+  z-index: 2;
+}
+
+.header-subnav > li > a {
+  display: block;
+  line-height: 1.5em;
+  text-transform: none;
+  text-decoration: none;
+  background-color: rgba(163, 1, 2, 0.65);
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  -webkit-transition: ease all 250ms;
+  transition: ease all 250ms;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-subnav > li > a:hover {
+  background-color: #a30102;
 }
 
 .mainslider {
@@ -482,7 +519,7 @@ html {
   display: table;
   line-height: 1em;
   padding: 15px 40px 11px;
-  margin: 0 auto;
+  margin: 15px auto;
   background-color: #222222;
   color: #fff;
   text-decoration: none;
@@ -496,6 +533,10 @@ html {
 .news-show:hover {
   background-color: transparent;
   color: #222;
+}
+
+.news-all img {
+  width: 100%;
 }
 
 .videos {
@@ -523,7 +564,7 @@ html {
 .footer {
   padding-top: 30px;
   background-color: #f7f7f7;
-  margin-top: 5px;
+  margin-top: 15px;
   padding-bottom: 30px;
 }
 
@@ -732,6 +773,133 @@ html {
   top: 23px;
 }
 
+.breadcrumb {
+  display: table;
+  margin: 30px auto;
+}
+
+.breadcrumb-item {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 2em;
+  border: 1px solid #c0c0c0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: #222;
+}
+
+.breadcrumb-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumb-item img {
+  height: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.button {
+  border: 2px solid #A30102;
+  line-height: 2.5em;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  display: table;
+  background-color: #A30102;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidepanel {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.sidepanel b {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.sidenav {
+  margin: 5px 0 30px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidenav li {
+  padding-left: 15px;
+}
+
+.sidenav li.active > a {
+  color: #777;
+}
+
+.sidenav li > a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  display: block;
+  line-height: 2.2em;
+}
+
+.page-content h2 {
+  font-size: 2em;
+  font-family: Georgia, serif;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.page-content h2:after {
+  position: absolute;
+  content: '';
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #A30102;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.table {
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.table tr:nth-of-type(even) {
+  background-color: #f5f5f5;
+}
+
+.table tr th {
+  border-bottom: 2px solid #777;
+}
+
+.table tr td,
+.table tr th {
+  padding: 15px 5px;
+}
+
+.table tr td {
+  font-weight: 500;
+}
+
+.table tr td:nth-of-type(2) {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1199px) {
   .header {
     margin-top: 44px;
@@ -778,19 +946,48 @@ html {
     margin-top: 0;
     -webkit-transition: ease all 250ms;
     transition: ease all 250ms;
+    margin: 0;
   }
-  .header-nav li {
+  .header-nav > li {
     display: block;
+    color: #fff;
   }
-  .header-nav li.active a {
+  .header-nav > li.header-sub {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .header-nav > li.active > a {
     background-color: #FF8B00;
     color: #fff;
   }
-  .header-nav li:before {
+  .header-nav > li:before {
     display: none;
   }
-  .header-nav li a {
+  .header-nav > li > a {
     color: #fff;
+  }
+  .header-subnav {
+    display: block;
+    width: 100%;
+    position: static;
+    background-color: transparent;
+  }
+  .header-subnav > li {
+    position: relative;
+  }
+  .header-subnav > li:before {
+    position: absolute;
+    content: '';
+    top: 13px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .header-subnav > li > a {
+    background-color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .show-nav {
     left: 0;
@@ -807,6 +1004,13 @@ html {
 }
 
 @media (max-width: 768px) {
+  .header-city:after {
+    right: -2px;
+    bottom: 11px;
+  }
+  .header {
+    margin-top: 59px;
+  }
   .footer-socials {
     margin-top: 15px;
     text-align: center;
@@ -893,9 +1097,6 @@ html {
     font-size: 1.4em;
     font-weight: 600;
   }
-  .header {
-    margin-top: 59px;
-  }
   .header-city:after {
     right: -4px;
     bottom: 11px;
@@ -903,6 +1104,10 @@ html {
 }
 
 @media (max-width: 425px) {
+  .header-city:after {
+    right: 50%;
+    bottom: 0;
+  }
   .contact-form label {
     width: 100%;
     clear: both;
@@ -933,6 +1138,9 @@ html {
 @media (max-width: 400px) {
   .brand-img {
     max-width: 100%;
+  }
+  .breadcrumb-item.prev, .breadcrumb-item.next {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

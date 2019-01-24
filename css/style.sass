@@ -160,7 +160,7 @@ html
   font-family: inherit
   float: left
   width: 20%
-  padding-top: 11px
+  padding-top: 12px
   padding-bottom: 11px
   border: 1px solid #d0d0d0
   border-top-right-radius: 5px
@@ -185,9 +185,17 @@ html
     right: 0
     height: 2px
     background-color: #c7c7c7
-  & li
+  & > li
     display: inline-block
     position: relative
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 3.5em
+    cursor: pointer
+    &.header-sub
+      &:hover
+        & .header-subnav
+          display: block
     &.active,
     &:hover
       &:before
@@ -198,16 +206,41 @@ html
         right: 0
         height: 2px
         background-color: $red
-    & a
+    & > a
       display: block
       padding-left: 30px
       padding-right: 30px
       line-height: 3.5em
       text-transform: uppercase
-      font-weight: bold
       text-decoration: none
       color: #222
       transition: ease all 250ms
+
+
+.header-subnav
+  display: none
+  position: absolute
+  top: 45px
+  left: 0
+  margin: 0
+  padding: 0
+  list-style-type: none
+  width: calc(100% + 50px)
+  z-index: 2
+  & > li
+    & > a
+      display: block
+      line-height: 1.5em
+      text-transform: none
+      text-decoration: none
+      background-color: rgba($red, .65)
+      color: #fff
+      padding: 10px
+      font-weight: 500
+      transition: ease all 250ms
+      text-shadow: 0 0 5px rgba(0,0,0, .5)
+      &:hover
+        background-color: rgba($red, 1)
 
 .mainslider
   position: relative
@@ -370,7 +403,7 @@ html
   display: table
   line-height: 1em
   padding: 15px 40px 11px
-  margin: 0 auto
+  margin: 15px auto
   background-color: #222222
   color: #fff
   text-decoration: none
@@ -381,6 +414,10 @@ html
   &:hover
     background-color: transparent
     color: #222
+  
+.news-all
+  & img
+    width: 100%
 
 .videos
   padding-top: 30px
@@ -401,7 +438,7 @@ html
 .footer
   padding-top: 30px
   background-color: #f7f7f7
-  margin-top: 5px
+  margin-top: 15px
   padding-bottom: 30px
   & .main-logo
     margin-top: 0
@@ -559,5 +596,104 @@ html
       top: 13px
     &:nth-of-type(3)
       top: 23px
+
+.breadcrumb
+  display: table
+  margin: 30px auto
+
+.breadcrumb-item
+  display: inline-block
+  vertical-align: middle
+  line-height: 2em
+  border: 1px solid #c0c0c0
+  padding-left: 10px
+  padding-right: 10px
+  border-radius: 5px
+  text-decoration: none
+  margin-right: 10px
+  color: #222
+  &:last-child
+    margin-right: 0 
+  & img
+    height: 16px
+    margin-top: 5px
+    margin-bottom: 5px
+
+.button
+  border: 2px solid $red
+  line-height: 2.5em
+  padding-left: 15px
+  padding-right: 15px
+  text-transform: uppercase
+  margin: 0 auto
+  border-radius: 5px
+  font-family: inherit
+  font-weight: 600
+  display: table
+  background-color: $red
+  color: #fff
+  text-decoration: none
+
+.sidepanel
+  background-color: #f5f5f5
+  padding: 15px
+  & b
+    font-size: 1.2em
+    text-transform: uppercase
+
+.sidenav
+  margin: 5px 0 30px 0
+  padding: 0
+  list-style-type: none
+  & li
+    padding-left: 15px
+    &.active
+      & > a
+        color: #777
+    & > a
+      text-decoration: none
+      color: #222
+      font-weight: 500
+      display: block
+      line-height: 2.2em
+
+.page-content
+  & h2
+    font-size: 2em
+    font-family: Georgia, serif
+    font-weight: 100
+    margin-top: 0
+    margin-bottom: 20px
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      bottom: -8px
+      left: 0
+      width: 50px
+      height: 2px
+      background-color: $red
+
+.img-responsive
+  max-width: 100%
+
+.table
+  width: 100%
+  font-size: 1em
+  text-align: center
+  & tr
+    &:nth-of-type(even)
+      background-color: #f5f5f5
+    & th
+      border-bottom: 2px solid #777
+    & td,
+    & th
+      padding: 15px 5px
+    & td
+      font-weight: 500
+      &:nth-of-type(2)
+        font-weight: 600
+        text-transform: uppercase
+
 
 @import 'media'
