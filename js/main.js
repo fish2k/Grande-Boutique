@@ -1,6 +1,7 @@
 'use strict'
 
 $(document).ready(function(){
+  // Верхний слайдер на главной
   var mainSlider = $('.mainslider');
 
   mainSlider.owlCarousel({
@@ -10,6 +11,7 @@ $(document).ready(function(){
     smartSpeed: 700
   });
 
+  // Каруселька с продукцией
   var product = $('.product');
 
   product.each(function(){
@@ -38,10 +40,67 @@ $(document).ready(function(){
     });
   });
 
+  // Бургер меню
   var burger = $('.header-burger');
   var nav = $('.header-nav');
 
   burger.click(function(){
     nav.toggleClass('show-nav');
+  });
+
+  // Модальное окно выбора городов
+  var citySelect = $('.header-city');
+  var cityModal = $('.modal-city');
+
+  citySelect.click(function(){
+    $('body').toggleClass('onmodal');
+    cityModal.slideToggle(500);
+  });
+
+  cityModal.click(function(){
+    $('body').toggleClass('onmodal');
+    $(this).slideToggle(300);
+  });
+
+  var modalBlock = $('.modal-block');
+
+  modalBlock.click(function(e){
+    e.stopPropagation();
+  });
+
+  // Корзина
+  var cartSizeOption = $('.cart-option_size');
+  var cartSizeSelect = $('.cart-select_value');
+  var cartSizeValue  = $('.cart-option_value');
+
+  cartSizeOption.click(function(){
+    $('.cart-select').slideToggle(150);
+  });
+
+  cartSizeSelect.click(function(){
+    var getSize = $(this).data('size');
+
+    cartSizeValue.attr('value', getSize);
+  });
+
+  var minus = $('.count_minus');
+  var plus  = $('.count_plus');
+  var count = $('.count-value');
+
+  minus.click(function(){
+    var currentCount = count.val();
+    var calcCountMinus = Number(currentCount) - 1;
+    
+    if (currentCount >= 2) {
+      count.attr('value', calcCountMinus);
+    } else {
+      return false;
+    }
+  });
+
+  plus.click(function(){
+    var currentCount = count.val();
+    var calcCountPlus = Number(currentCount) + 1;
+    count.attr('value', calcCountPlus);
   });
 });

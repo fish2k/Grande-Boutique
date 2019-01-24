@@ -105,53 +105,62 @@
     </div>
   </div>
 
-  <div class="container-fluid">
-    <h2 class="title">Контакты</h2>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adb8278b895d4eaa9c91d7573b1f895865c1eb79f8af7d1e8214bb359aee08afe&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
-  </div>
+  <div class="container">
+    <h2 class="title">
+      Корзина
+    </h2>
 
-  <div class="container contacts">
-    <div class="row">
-      <div class="col-md-4">
-        <p>
-          <span>Адрес:</span>
-          Уфа, ул. Чернышевского, 75
-        </p>
-        <p>
-          <span>Телефон:</span>
-          <a href="tel:88007754112">8 (800) 775-41-12</a>
-        </p>
-        <p>
-          <span>E-mail:</span>
-          <a href="mailto:info@grandeboutique.ru">info@grandeboutique.ru</a>
-        </p>
-        <p>
-          <span>Режим работы:</span>
-          Пн. - Вс.: с 10:00 до 20:00
-        </p>
-      </div>
-      <div class="col-md-8">
-        <form class="contact-form">
-          <b>Обратная связь</b>
-          <label for="comment"><span>Сообщение:</span> <i>*</i>
-            <textarea name="comment" id="comment" rows="6"></textarea>
-          </label>
-          <label for="name"><span>Ваше имя:</span> <i>*</i>
-            <input type="text" name="name" id="name">
-          </label>
-          <label for="telephone"><span>Контактный телефон:</span> <i>*</i>
-            <input type="text" name="telephone" id="telephone">
-          </label>
-          <label for="email"><span>E-mail:</span>
-            <input type="email" name="email" id="email">
-          </label>
-          <label for="agree">
-            <input id="agree" type="checkbox"> Я даю согласие на <a href="/">обработку персональных данных</a>
-          </label>
-          <button type="submit">Отправить</button><button type="reset">Очистить</button>
-        </form>
-      </div>
-    </div>
+    <table class="table-cart">
+      <tr>
+        <th>№</th>
+        <th>Артикул</th>
+        <th>Фото</th>
+        <th>Наименование</th>
+        <th>Размер</th>
+        <th>Кол-во</th>
+        <th>Цена</th>
+        <th>Цена со скидкой</th>
+        <th>В избранное</th>
+        <th>Удалить</th>
+      </tr>
+      <tr>
+        <td>1 </td>
+        <td>N-456/12</td>
+        <td><img src="img/product.png" class="cart-product"></td>
+        <td>
+          <a class="cart-product_name" href="">
+            BOSS HUGO BOSS
+            <span>Куртка кожаная</span>
+          </a>
+        </td>
+        <td>
+          <div class="cart-option cart-option_size">
+            <!-- <div class="cart-option_value">M</div> -->
+            <input type="text" class="cart-option_value" value="M" disabled>
+            <div class="cart-select">
+              <div class="cart-select_value" data-size="M">M</div>
+              <div class="cart-select_value" data-size="XL">XL</div>
+              <div class="cart-select_value" data-size="XXL">XXL</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="cart-product_count">
+            <div class="count_minus">-</div>
+            <input class="count-value" type="number" value="1">
+            <div class="count_plus">+</div>
+          </div>
+        </td>
+        <td>
+          <div class="cart-price" data-price="49900">49900 ₽</div>
+        </td>
+        <td>
+          <div class="cart-pricedisocunt" data-price="41300">41300 ₽</div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
   </div>
 
   <div class="footer">
