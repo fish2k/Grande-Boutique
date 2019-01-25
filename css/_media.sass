@@ -87,6 +87,12 @@
     display: block
 
 @media (max-width: 991px)
+  .table-responsive
+    overflow-x: scroll
+  
+  .table-cart
+    width: 115vw
+
   .left-links
     display: none
 
@@ -154,7 +160,22 @@
     & .item-body
       right: 0
 
+@media (max-width: 650px)
+  .count_minus
+    left: -7.5px
+  .count_plus
+    right: -7.5px
+
+  .count_minus,
+  .count_plus
+    width: 13px
+
 @media (max-width: 600px)
+  .cart-option
+    &:after
+      width: 20px
+      background-position: 4px 9px
+
   .modal-block
     width: 320px
   

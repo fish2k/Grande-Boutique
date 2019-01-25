@@ -1,6 +1,7 @@
 'use strict'
 
 $(document).ready(function(){
+
   // Верхний слайдер на главной
   var mainSlider = $('.mainslider');
 
@@ -91,10 +92,10 @@ $(document).ready(function(){
     var currentCount = count.val();
     var calcCountMinus = Number(currentCount) - 1;
     
-    if (currentCount >= 2) {
-      count.attr('value', calcCountMinus);
-    } else {
+    if (currentCount <= 1) {
       return false;
+    } else {
+      count.attr('value', calcCountMinus);
     }
   });
 
@@ -103,4 +104,22 @@ $(document).ready(function(){
     var calcCountPlus = Number(currentCount) + 1;
     count.attr('value', calcCountPlus);
   });
+
+  var brandAnchor = $('.brand-anchor');
+  var brandBlock = $('.brand-block');
+  
+
+  brandAnchor.click(function(){
+    var currentLetter = $(this).data('letter');
+
+    brandBlock.each(function(){
+      var currentBrandLetter = $(this).data('brand-letter');
+
+      if ( currentBrandLetter == currentLetter ) {
+        brandBlock.removeClass('letter-show');
+        $(this).toggleClass('letter-show');
+      }
+    });
+  });
+
 });
