@@ -122,4 +122,12 @@ $(document).ready(function(){
     });
   });
 
+  $('.sidepanel-sub').click(function(){
+    var sub = $(this).find('.sidepanel-submenu');
+
+    sub.stop();
+    sub.slideToggle(300);
+    $(this).toggleClass('show-sub');
+  });
+
 });
