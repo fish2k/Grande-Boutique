@@ -1343,7 +1343,7 @@ hr
 .related
   & .nav-tabs
     text-align: center
-    margin: 0
+    margin: 30px 0
     padding: 0
     list-style-type: none
     background-color: #e8e8e8
@@ -1369,5 +1369,162 @@ hr
             right: 15px
             height: 2px
             background-color: $red
+
+.cart-total
+  text-align: right
+  line-height: 3.5em
+  font-weight: 600
+  font-size: 1.2em
+
+.order-form
+  & b
+    font-size: 1.4em
+
+.order-label
+  display: block
+  margin-top: 15px
+  margin-bottom: 15px
+  &[for="order-subscribe"]
+    margin-top: -10px
+  &[for="order-pickup_point"]
+    & span
+      display: inline-block
+  & span
+    display: block
+    color: #777
+    & b
+      color: #222
+  &[for="order-promocode"]
+    & input
+      border: 1px solid #d9d9d9
+      background-color: #f0f0f0
+  &[for="payment-card"],
+  &[for="payment-webmoney"],
+  &[for="payment-paypal"]
+    position: relative
+    width: calc(100% - 85px)
+    cursor: pointer
+    & span,
+    & img,
+    & input
+      display: inline-block
+      vertical-align: middle
+    & span
+      width: 140px
+    & input
+      position: absolute
+      top: 0
+      right: 0
+    
+  
+.order-input
+  &[type="button"]
+    @extend .button
+    margin: 0
+    display: inline-block
+    margin-left: 15px
+  &[type="text"],
+  &[type="email"]
+    display: block
+    width: calc(100% - 200px)
+    font-family: inherit
+    outline: none
+    padding: 5px
+  
+.order-textarea
+  display: block
+  width: calc(100% - 200px)
+  font-family: inherit
+  outline: none
+  padding: 5px
+
+.order-total
+  text-align: right
+  font-size: 1.5em
+  & span
+    display: block
+    text-align: left
+    border-bottom: 1px solid #222222
+    text-transform: uppercase
+    font-weight: 500
+    line-height: 2em
+    font-size: .9em
+    margin-bottom: 5px
+
+.order-button
+  @extend .button
+  margin: 30px 0
+  float: right
+
+.form-login_label
+  display: block
+  margin: 15px 0
+  & span
+    display: block
+  & input
+    width: 100%
+    border: 1px solid #d9d9d9
+    background-color: #f0f0f0
+    line-height: 2em
+    font-family: inherit
+    padding-left: 15px
+    padding-right: 15px
+
+.button-login,
+.button-register
+  cursor: pointer
+  @extend .button
+  margin: 0 15px 0 0
+  display: inline-block
+
+.auth-title
+  text-transform: uppercase
+  font-size: 1.2em
+  margin: 0 0 30px 0
+
+.form-register
+  & span
+    display: block
+  & label
+    display: block
+    cursor: pointer
+
+.form-login_gender
+  display: inline-block !important
+  padding-top: 9px
+  margin-right: 25px
+
+.user-side
+  margin: 15px 0
+  padding: 0
+  list-style-type: none
+  & li
+    &.active
+      & a
+        font-weight: 600
+    & a
+      padding: 5px 15px
+      display: block
+      text-decoration: none
+      color: #222
+
+.form-userdata
+  width: 70%
+  margin: 0 auto
+  font-size: .8em
+  & span
+    display: block
+    margin-top: 30px
+    margin-bottom: -10px
+  & input
+    display: block
+    width: 100%
+    margin-top: 15px
+    margin-bottom: 15px
+    font-family: inherit
+    padding: 5px 15px
+    border: 1px solid #d9d9d9
+    background-color: #f0f0f0
+    line-height: 2em
 
 @import 'media'
